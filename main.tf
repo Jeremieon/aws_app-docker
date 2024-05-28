@@ -65,6 +65,13 @@ resource "aws_security_group" "my_app_sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
+   ingress {
+    from_port   = 8082
+    to_port     = 8082
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
   ingress {
     from_port   = 8083
     to_port     = 8083
